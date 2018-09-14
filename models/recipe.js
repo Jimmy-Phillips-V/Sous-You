@@ -1,4 +1,5 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function(sequelize, //DataTypes
+  ) {
   var Recipe = sequelize.define("Recipe", {
     body :{
       type : DataTypes.TEXT,
@@ -6,8 +7,6 @@ module.exports = function(sequelize, DataTypes) {
       len : [1]
     }
   });
-  return Recipe;
-};
 
 Recipe.associate = function(models) {
   // Associating Author with Posts
@@ -21,5 +20,6 @@ Recipe.associate = function(models) {
       allowNull: false
     }
   });
-return Recipe;
+};
+  return Recipe;
 };
