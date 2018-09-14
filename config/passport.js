@@ -1,8 +1,7 @@
 var passport = require("passport");
-<<<<<<< HEAD
 var LocalStrategy = require("passport-local").Strategy;
 
-var db = require("../../Bootcamp/UCBBER201807FSF4-FT/08-week/project-2/Sequelize-Passport-Example/models");
+var db = require("../models");
 
 // Telling passport we want to use a Local Strategy. In other words, we want login with a username/email and password
 passport.use(new LocalStrategy(
@@ -48,6 +47,3 @@ passport.deserializeUser(function(obj, cb) {
 
 // Exporting our configured passport
 module.exports = passport;
-=======
-var googleOauth = require("passport-google-oauth");
->>>>>>> 7d519ac171061ad98cd314cddc79deaa8bc4def5
