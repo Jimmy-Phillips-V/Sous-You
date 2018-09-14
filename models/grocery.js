@@ -1,8 +1,8 @@
 module.exports = function(sequelize, DataTypes) {
-  var Grocery = sequelize.define("Grocery ", {
-    ingredientName : DataTypes.TEXT,
+  var Grocery = sequelize.define("Grocery", {
+    ingredientName: DataTypes.TEXT,
   });
-  return Grocery ;
+  return Grocery;
 };
 
 Grocery.associate = function(models) {
@@ -13,5 +13,5 @@ Grocery.associate = function(models) {
       allowNull: false
     }
   });
-return Grocery ;
+return Grocery;
 };

@@ -14,5 +14,3 @@ Category.associate = function(models) {
   });
   return Category;
 };
-
-
