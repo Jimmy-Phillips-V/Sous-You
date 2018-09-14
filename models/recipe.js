@@ -1,5 +1,6 @@
-module.exports = function(Sequelize, DataTypes) {
-  var Recipe = Sequelize.define("Recipe", {
+module.exports = function(sequelize, //DataTypes
+  ) {
+  var Recipe = sequelize.define("Recipe", {
     body :{
       type : DataTypes.TEXT,
       allowNull : false,
@@ -10,10 +11,10 @@ module.exports = function(Sequelize, DataTypes) {
 Recipe.associate = function(models) {
   // Associating Author with Posts
   // When an  is deleted, also delete any associated Posts
-  // Recipe.hasMany(models.Grocery, {
-  //   onDelete: "cascade"
+  Recipe.hasMany(models.Grocery, {
+    onDelete: "cascade"
     //????
-  
+  }),
   Recipe.belongsTo(models.User, {
     foreignKey: {
       allowNull: false

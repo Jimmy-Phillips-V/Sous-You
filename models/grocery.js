@@ -1,8 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
-  var Grocery = sequelize.define("Grocery ", {
+  var Grocery = sequelize.define("Grocery", {
     ingredientName : DataTypes.TEXT,
   });
-
 
 Grocery.associate = function(models) {
   // Associating Grocery with Recipe
