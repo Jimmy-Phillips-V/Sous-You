@@ -2,8 +2,6 @@ module.exports = function(sequelize, DataTypes) {
   var Grocery = sequelize.define("Grocery", {
     ingredientName: DataTypes.TEXT,
   });
-  return Grocery;
-};
 
 Grocery.associate = function(models) {
   // Associating Grocery with Recipe
@@ -11,7 +9,8 @@ Grocery.associate = function(models) {
   Grocery.belongsTo(models.Recipe, {
     foreignKey: {
       allowNull: false
-    }
-  });
+      }
+    });
+  };
 return Grocery;
 };
