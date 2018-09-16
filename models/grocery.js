@@ -13,4 +13,5 @@ Grocery.associate = function(models) {
     });
   };
 return Grocery;
+  };
 };
