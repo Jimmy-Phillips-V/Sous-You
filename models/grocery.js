@@ -9,8 +9,9 @@ Grocery.associate = function(models) {
   Grocery.belongsTo(models.Recipe, {
     foreignKey: {
       allowNull: false
-    }
-  });
+      }
+    });
+  };
 return Grocery;
   };
 };
