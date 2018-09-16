@@ -2,8 +2,6 @@ module.exports = function(sequelize, DataTypes) {
   var Grocery = sequelize.define("Grocery", {
     ingredientName: DataTypes.TEXT,
   });
-  return Grocery;
-};
 
 Grocery.associate = function(models) {
   // Associating Grocery with Recipe
@@ -14,4 +12,5 @@ Grocery.associate = function(models) {
     }
   });
 return Grocery;
+  };
 };
