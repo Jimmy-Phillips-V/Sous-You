@@ -16,14 +16,9 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/html/login.html"));
   });
 
-  // blog route loads profile.html
-  app.get("/profile", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/profile.html"));
-  });
-
-  // authors route loads signup.html
-  app.get("/signup", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/signup.html"));
+  // Render 404 page for any unmatched routes
+  app.get("*", function(req, res) {
+    res.status(404).end();
   });
 
 };
