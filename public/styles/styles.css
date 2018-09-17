@@ -112,3 +112,17 @@ body {
 .mastfoot {
   color: rgba(255, 255, 255, .5);
 }
+
+/* profile.html */
+
+html,
+.profilebody {
+  background:aquamarine;
+}
+
+.card {
+  display:inline-block;
+  padding-top: 15px;
+  width: 15%;
+  margin: auto;
+}
