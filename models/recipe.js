@@ -13,7 +13,7 @@ Recipe.associate = function(models) {
   Recipe.hasMany(models.Grocery, {
     onDelete: "cascade"
     //????
-  }),
+  });
   Recipe.belongsTo(models.User, {
     foreignKey: {
       allowNull: false
