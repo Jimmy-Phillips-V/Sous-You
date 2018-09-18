@@ -12,7 +12,7 @@ module.exports = function(app) {
   });
 
   // cms route loads login.html
-  app.get("/login", function(req, res) {
+  app.get("/login" ,function(req, res) {
     res.sendFile(path.join(__dirname, "../public/html/login.html"));
   });
 
