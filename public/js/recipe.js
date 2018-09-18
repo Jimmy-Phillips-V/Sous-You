@@ -23,7 +23,7 @@ else if (value == 4) {
   diet = "pescatarian"
   }
 else if (value == 5) {
-  diet = ""
+  diet = "balanced"
   }
 
     
@@ -31,36 +31,36 @@ var queryURL = `https://api.edamam.com/search?q=${diet}&app_id=b4544b0b&app_key=
 $.get(queryURL, function(response){
 
   edamamCall = response.hits;
-  for (var i = 0; i < edamamCall.length; i++) {
+  // for (var i = 0; i < edamamCall.length; i++) {
+  for (var i = 0; i < 5; i++) {
+
       var recipeDiv = $('<div>');
       recipeDiv.attr('id', 'receipeInfo' + i);
       recipeDiv.attr('class', 'card rounded');
       recipeDiv.attr('style', 'width: 33rem;');
       recipeDiv.css({'height': '340px', 'margin' : '10px'});
 
+      var recipeAnchor = $('<a>')
+      recipeAnchor.attr('href', edamamCall[i].recipe.url);
+      recipeAnchor.attr('target', '_blank');
+
       var recipePic = $('<img>');
       recipePic.attr('class', 'card-img-top rounded')
       recipePic.attr('src', edamamCall[i].recipe.image);
       recipePic.attr('alt', 'pic of food');
-      recipeDiv.append(recipePic);
-
+      recipeAnchor.append(recipePic);
 
       var recipeTitle = $('<h3>');
       recipeTitle.attr('class', 'card-text text-center text-wrap card-title');
       recipeTitle.text(edamamCall[i].recipe.label);
-      recipeDiv.append(recipeTitle);
+      recipeAnchor.append(recipeTitle);
 
-      var recipeAnchor = $('<a>')
-      recipeAnchor.attr('href', edamamCall[i].recipe.url);
-      recipeAnchor.attr('target', '_blank');
-      // recipeDiv.append(recipeAnchor);
+     //Append name,image and url of the recipe
+      recipeDiv.append(recipeAnchor);
 
-      //send response to our profile page & recipe table
-      $('#recipes').append(recipeDiv);
-      //Ingredients,retrieve data to be sent to the profile & ingredients table
+      //Recipes ingredients
       var ingredientsDiv = $('<div>');
-
-      var ingredientItems = $("<p>");
+      var ingredientItems = $("<h6>");
       ingredientItems.text(edamamCall[i].recipe.ingredientLines);
       ingredientsDiv.append(ingredientItems);
       $('').append();   
@@ -70,55 +70,6 @@ $.get(queryURL, function(response){
   
    
         
-//  if(userInfo === "No preference") {
-//                 $.ajax({
-//                     // url: "https://cors-anywhere.herokuapp.com/" + "https://api.edamam.com/search?q=" + ??? + "&app_id=b4544b0b&app_key=549eddf763b78d2ec7e3fc9db4d1ef5d",
-//                     url:"https://api.edamam.com/search?q=" +  + "&app_id=b4544b0b&app_key=549eddf763b78d2ec7e3fc9db4d1ef5d",
-        
-//                     method: "GET"
-//                 }).then(function (response) {
-    
-//         edamamCall = response.hits;
-//         for (var i = 0; i < edamamCall.length; i++) {
-//             var recipeDiv = $('<div>');
-//             recipeDiv.attr('id', 'receipeInfo' + i);
-//             recipeDiv.attr('class', 'card rounded');
-//             recipeDiv.attr('style', 'width: 33rem;');
-//             recipeDiv.css({'height': '340px', 'margin' : '10px'});
-    
-//             var recipeAnchor = $('<a>')
-//             recipeAnchor.attr('href', edamamCall[i].recipe.url);
-//             recipeAnchor.attr('target', '_blank');
-    
-//             var recipePic = $('<img>');
-//             recipePic.attr('class', 'card-img-top rounded')
-//             recipePic.attr('src', edamamCall[i].recipe.image);
-//             recipePic.attr('alt', 'pic of food');
-//             recipeAnchor.append(recipePic);
-    
-    
-//             var recipeTitle = $('<h3>');
-//             recipeTitle.attr('class', 'card-text text-center text-wrap card-title');
-//             recipeTitle.text(edamamCall[i].recipe.label);
-//             recipeAnchor.append(recipeTitle);
-    
-//             recipeDiv.append(recipeAnchor);
-            
-//           //send response to our profile page & recipe table
-            
-//             $('#recipes').append(recipeDiv)
-            
-//           //Ingredients,retrieve data to be sent to the profile & ingredients table
-//           var ingredientsDiv = $('<div>');
-         
-//           var ingredientItems = $("<p>");
-//           ingredientItems.text(edamamCall[i].recipe.ngredientLines);
-//           ingredientsDiv.append(ingredientItems);
-//           // $('#ingredients').append(recipeDiv);
-
-//         }
-//         })
-    // }
-
+ 
 
 
