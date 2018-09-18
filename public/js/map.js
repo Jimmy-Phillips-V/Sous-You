@@ -16,11 +16,16 @@ app.get("/api/userzip/:id", function (req, res) {
   res.json(dbUser)
   })
 });
-function places(search) {
- $.ajax({url:'https://maps.googleapis.com/maps/api/place/textsearch/json?'+query+'+in+'
- +search+'&key='+ API_Key, success: function(result){
-    console.log(result)
-    }
-  })
-}
+
+function places() {
+  $.ajax({
+  url:"https://cors-anywhere.herokuapp.com/" + "https://maps.googleapis.com/maps/api/place/textsearch/json?"+query+"+in+"+search+"&key="+API_Key,
+  method: "GET"
+   }).then(function (response) {
+     console.log(response)
+   })
+ }
+ 
+ 
+ places();
 }
