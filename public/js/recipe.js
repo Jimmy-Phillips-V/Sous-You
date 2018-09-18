@@ -2,7 +2,7 @@ var edamamCall;
 
 //Obtain user inputs
 $('#submitInfo').on('click', function(event) { 
-  event.preventDefault();
+event.preventDefault();
 var e = document.getElementById('userPreference');
 var value = e.options[e.selectedIndex].value;
 var diet;
@@ -78,7 +78,7 @@ $.get(queryURL, function(response){
 
       //send response to our html page 
       $('#recipes').append(recipeDiv);
-      $('#ingredients').append(ingredientsDiv)
+      $('.meal').append(ingredientsDiv)
      } 
    })
   })
