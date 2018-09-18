@@ -3,6 +3,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 // Requiring passport as we've configured it
 var passport = require("./config/passport.js");
+// var BasicStrategy = require('passport-http').BasicStrategy
 // var sequelize = require("sequelize")
 var session = require('express-session')
 
@@ -27,7 +28,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Routes
-require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 require("./routes/user-api-routes")(app);
 
@@ -40,7 +40,7 @@ require("./routes/user-api-routes")(app);
 // }
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync({force: true}).then(function() {
+db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
