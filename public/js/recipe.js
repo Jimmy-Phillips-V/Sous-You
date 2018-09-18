@@ -1,5 +1,3 @@
-//https://www.livestrong.com/article/92939-calculate-bmi-hand/
-
 var edamamCall;
 
 //Obtain user inputs
