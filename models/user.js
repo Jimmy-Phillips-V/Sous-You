@@ -9,7 +9,7 @@ User.associate = function(models) {
   User.hasMany(models.Recipe, {
     onDelete: "cascade"
     //????
-  }),
+  });
   User.belongsTo(models.Category, {
     foreignKey: {
       allowNull: false
