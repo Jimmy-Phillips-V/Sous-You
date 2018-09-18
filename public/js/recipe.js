@@ -57,14 +57,24 @@ $.get(queryURL, function(response){
       recipeDiv.append(recipeAnchor);
 
       //Recipes ingredients
-      var ingredientsDiv = $('<div>');
-      var ingredientItems = $("<h6>");
-      ingredientItems.text(edamamCall[i].recipe.ingredientLines);
+      var ingredientsDiv = $('<div>'); //whole grocery card
+      var ingredientItems = $("<div>");
+      ingredientItems.attr('class', 'ingredient')
+      // ingredientItems.text(edamamCall[i].recipe.ingredientLines);
+      // var groceryItem = $("<h6>");
+      for (var j = 0; j < edamamCall[i].recipe.ingredientLines.length; j++) {
+        var groceryItem = $("<p>");
+        groceryItem.text(edamamCall[i].recipe.ingredientLines[j]);
+        ingredientItems.append(groceryItem);
+        console.log(groceryItem);
+      }
 
-      var recipeName = $('<h3>')
+      var recipeName = $('<h2>');
+      recipeName.attr('class', 'recipeName');
       recipeName.text(edamamCall[i].recipe.label);
       $(recipeName).append(ingredientItems);
       $(ingredientsDiv).append(recipeName);
+      recipeName.attr('class', 'recipeGroceries')
 
       //send response to our html page 
       $('#recipes').append(recipeDiv);
