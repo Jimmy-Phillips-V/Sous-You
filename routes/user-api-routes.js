@@ -13,8 +13,7 @@ module.exports = function(app) {
     // They won't get this or even be able to access this page if they aren't authed
     res.json("/profile");
   });
-
-  // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
+   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
   app.post("/api/signup", function(req, res) {
@@ -116,7 +115,8 @@ module.exports = function(app) {
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
         email: req.user.email,
-        id: req.user.id
+        id: req.user.id,
+        preference: req.user.userPreference
       });
     }
   });

@@ -1,10 +1,20 @@
+$(function(){
+
+
 var edamamCall;
+var preference;
+$.get('/api/user_data', function(data){
+  edamam(data.preference);
+})
+
 
 //Obtain user inputs
-$('#submitInfo').on('click', function(event) { 
-event.preventDefault();
-var e = document.getElementById('userPreference');
-var value = e.options[e.selectedIndex].value;
+// $('#submitInfo').on('click', function(event) { 
+// event.preventDefault();
+
+function edamam(pref){
+// var e = document.getElementById('userPreference');
+var value = pref;
 var diet;
 
 if (value == 1) {
@@ -81,4 +91,6 @@ $.get(queryURL, function(response){
       $('.meal').append(ingredientsDiv)
      } 
    })
-  })
+  // })
+  };
+});
