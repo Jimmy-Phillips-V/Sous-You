@@ -1,24 +1,26 @@
+var db = require("../models");
 
 var API_Key = "AIzaSyCW-k8IgEVhb7dBDhlguI6pbmXVT2UEFMQ"
 
 var search = "94520";
 var query = "query=supermarkets"
 
-app.get("/api/userzip", function (req, res) {
+module.exports = function(app) {
+
+app.get("/api/userzip/:id", function (req, res) {
   db.User.findOne({
     where: {
-      zip: req.user.zip
-    }
-    
+      email: req.params.id
+    } 
   }).then(function(dbUser) {
   res.json(dbUser)
-})
-
+  })
+});
 function places(search) {
  $.ajax({url:'https://maps.googleapis.com/maps/api/place/textsearch/json?'+query+'+in+'
- +zip+'&key='+ API_Key, success: function(result){
+ +search+'&key='+ API_Key, success: function(result){
     console.log(result)
     }
   })
 }
-places()
+}
