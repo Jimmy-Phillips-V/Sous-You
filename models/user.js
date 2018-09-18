@@ -1,6 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
-    userName: DataTypes.STRING
+    name: DataTypes.STRING,
+    email: DataTypes.STRING,
+    zipCode: DataTypes.INTEGER,
+    userPreference: DataTypes.STRING
   });
 
 User.associate = function(models) {
@@ -9,7 +12,7 @@ User.associate = function(models) {
   User.hasMany(models.Recipe, {
     onDelete: "cascade"
     //????
-  }),
+  });
   User.belongsTo(models.Category, {
     foreignKey: {
       allowNull: false

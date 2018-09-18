@@ -1,4 +1,3 @@
-
 var edamamCall;
 
 //Obtain user inputs
