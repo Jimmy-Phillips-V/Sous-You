@@ -28,10 +28,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Routes
-// require("./routes/apiRoutes")(app);
+require("./routes/user-api-routes")(app);
 require("./routes/htmlRoutes")(app);
 require("./routes/map-route.js")(app);
-dd
+
+db
 // var syncOptions = { force: false };
 
 // // If running a test, set syncOptions.force to true
@@ -41,8 +42,8 @@ dd
 // }
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
+db.sequelize.sync({force: true}).then(function() {
+    app.listen(PORT, function() {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
       PORT,

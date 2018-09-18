@@ -16,7 +16,7 @@ module.exports = function(app) {
   });
 
   // cms route loads login.html
-  app.get("/login" ,function(req, res) {
+  app.get("/login", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/html/login.html"));
   });
 
@@ -26,8 +26,3 @@ module.exports = function(app) {
   });
 
 };
-
-  // Render 404 page for any unmatched routes
-  // app.get("*", function(req, res) {
-  //   res.render("404");
-  // });
