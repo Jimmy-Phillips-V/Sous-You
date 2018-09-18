@@ -1,4 +1,3 @@
-//https://www.livestrong.com/article/92939-calculate-bmi-hand/
 
 var edamamCall;
 
@@ -62,14 +61,15 @@ $.get(queryURL, function(response){
       var ingredientsDiv = $('<div>');
       var ingredientItems = $("<h6>");
       ingredientItems.text(edamamCall[i].recipe.ingredientLines);
-      ingredientsDiv.append(ingredientItems);
-      $('').append();   
-     }   
+
+      var recipeName = $('<h3>')
+      recipeName.text(edamamCall[i].recipe.label);
+      $(recipeName).append(ingredientItems);
+      $(ingredientsDiv).append(recipeName);
+
+      //send response to our html page 
+      $('#recipes').append(recipeDiv);
+      $('#ingredients').append(ingredientsDiv)
+     } 
    })
   })
-  
-   
-        
- 
-
-
