@@ -67,9 +67,3 @@ $.get(queryURL, function(response){
      }   
    })
   })
-  
-   
-        
- 
-
-
