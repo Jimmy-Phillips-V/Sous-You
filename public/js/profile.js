@@ -1,4 +1,3 @@
-
 $(document).on("click", ".user-map", getMap);
 
 

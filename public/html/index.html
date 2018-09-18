@@ -38,6 +38,11 @@
           <!-- Submit Button -->
           <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
             Sign Up</button>
+            <!-- Member Login Link -->
+            <h5>Already a Member? <div class="container">
+                <!-- Button trigger modal -->
+                <a href="#myModal" class="btn" id="user-login">Click Here to Login</a>
+                </div></h5>
         </div>
 
       <footer class="mastfoot mt-auto">
@@ -91,6 +96,27 @@
         </div>
       </div>
     </div>
+
+    <!-- Modal Login -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close</span></button>
+        </div>
+        <div class="modal-body">
+         
+          
+          
+         <iframe width="100%" height="700" style="overflow: hidden;" src="https://docs.google.com/forms/d/e/1FAIpQLSez3GlqtSHjfJuuHWiut4e9mEnhVrGx2XbcYf-5922TS7FmeA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0" scrolling="no">Loading&amp;#8230;</iframe>
+          
+          
+          
+        </div>
+  
+      </div>
+    </div>
+  </div>
   
     <script type="text/javascript">
 
@@ -120,6 +146,11 @@
         window.location.replace(data);
       })
     })
+
+    $("#user-login").on("click", function(){
+      $('#results-modal, .modal-content').modal('show');
+    })
+
     
     </script>
 
