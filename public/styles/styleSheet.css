@@ -38,3 +38,10 @@ body{
   margin-left:5px;
 }
 
+.recipeGroceries {
+  background: pink;
+}
+
+.recipeName {
+  font-weight: bold
+}
