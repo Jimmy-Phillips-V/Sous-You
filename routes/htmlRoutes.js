@@ -11,6 +11,10 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/html/index.html"));
   });
 
+  app.get("/profile", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/profile.html"));
+  });
+
   // cms route loads login.html
   app.get("/login" ,function(req, res) {
     res.sendFile(path.join(__dirname, "../public/html/login.html"));
