@@ -233,3 +233,7 @@ h4 {
 h3 {
   color: black !important;
 }
+
+.jumbotron {
+  background-color: rgba(128, 128, 128, .9) !important
+}
