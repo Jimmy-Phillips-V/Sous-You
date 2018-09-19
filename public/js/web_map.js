@@ -28,9 +28,7 @@ var center;
     })
     }
 
-
-    var markers = []
-
+var markers = []
 
 function places(zip) {
     $.ajax({
@@ -51,18 +49,6 @@ function places(zip) {
       });
 }
 
-
-// function getUser() {
-//     $.ajax({
-//         url: "/api/userzip/",//<- id,
-//         method: "GET"
-//     }).then(function (zip) {
-//         console.log(zip)
-//         places(zip)// find zip;
-//     })
-// }
-
-// var id = ///find the user
 
 
 
