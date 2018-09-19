@@ -177,7 +177,6 @@ body {
 }
 
 .profileHtml {
-  /* background: url("../images/eggplant.jpg") no-repeat center center fixed; */
   background: url("../images/profilebackground.jpg") no-repeat center center fixed;
   height: 100%;
   -webkit-background-size: cover;
@@ -200,9 +199,6 @@ body {
   font-size: 12px;
   padding: 3px;
   font-size: 10px;
-  /* background: #BA4A00;
-  border-color:#BA4A00 !important;
-  opacity: 50%; */
 }
 
 
@@ -236,14 +232,3 @@ h4 {
 h3 {
   color: black !important;
 }
-
-/* btn {
-  padding: 0px !important;
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-} */
-/* 
-#header .callout {
-
-} */

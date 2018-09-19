@@ -20,6 +20,11 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/html/login.html"));
   });
 
+  app.get('/logout', function(req, res){
+    req.logout();
+    res.redirect('/');
+  });
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.status(404).end();
