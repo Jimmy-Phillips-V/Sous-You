@@ -58,9 +58,10 @@ module.exports = function(app) {
   });
 
   app.get("/api/userzip", function (req, res) {
-    db.User.findOne({
+    db.User.findAll({
       where: {
-        id: req.user.id
+        id: req.user.id,
+        zipCode: req.user.zipCode
       }
     }).then(function(dbUser) {
     res.json(dbUser)
@@ -116,7 +117,8 @@ module.exports = function(app) {
       res.json({
         email: req.user.email,
         id: req.user.id,
-        preference: req.user.userPreference
+        preference: req.user.userPreference,
+        zip: req.user.zipCode
       });
     }
   });
