@@ -29,9 +29,8 @@
         <div class="inner">
           <h3><a class="masthead-brand" href="#">SOUS YOU</a></h3>
           <nav class="nav nav-masthead justify-content-center">
-            <!-- <a class="nav-link active text-light" href="#">Home</a> -->
-            <!-- <a class="nav-link text-light" href="profile.html">Profile</a> -->
-            <a class="nav-link text-light" href="login.html">Log In</a> 
+            <!-- <a class="nav-link text-light btn" id="login-link">Log In</a>  -->
+            <button type="submit" class="btn btn-link text-light" id="login-link">Log In</button>
           </nav>
         </div>
       </header>
@@ -128,6 +127,11 @@
 
     $("#submit").on("click", function(){
       $('#signup-modal, .modal-content').modal('show');
+    })
+
+    $("#login-link").on("click", function(){
+      $('#signup-modal, .login-form').modal('show');
+      $(".signup-form").hide()
     })
 
     $(".login-form").hide()
