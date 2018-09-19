@@ -94,12 +94,12 @@ $.get(queryURL, function(response){
         console.log(groceryItem);
       }
 
-      var recipeName = $('<h2>');
+      var recipeName = $('<h5>');
       recipeName.attr('class', 'recipeName');
       recipeName.text(edamamCall[i].recipe.label);
       $(recipeName).append(ingredientItems);
       $(ingredientsDiv).append(recipeName);
-      recipeName.attr('class', 'recipeGroceries')
+
 
       //send response to our html page 
       $('#recipes').append(recipeDiv);

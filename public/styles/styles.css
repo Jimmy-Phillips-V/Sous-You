@@ -204,8 +204,17 @@ body {
   opacity: 50%; */
 }
 
+
+.grocery{
+  background-color:  blanchedalmond
+}
+
 .meal {
   width: 100%;
-  height: 100%;
-  background: blue;
+  height: 100%; 
+  background: whitesmoke;
+  overflow-y: auto;
+}
+.ingredient {
+  font-size: 15px;
 }
