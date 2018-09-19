@@ -75,6 +75,7 @@ $.get(queryURL, function(response){
       recipeUrl.attr('target', '_blank');
       recipeUrl.text('Get Details');
       recipeAnchor.append(recipeUrl);
+      recipeDiv.append(recipeAnchor);
 
      //Append name,image and url of the recipe
       recipeDiv.append(recipeAnchor);
