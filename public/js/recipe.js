@@ -44,8 +44,9 @@ $.get(queryURL, function(response){
 
       var recipeDiv = $('<div>');
       recipeDiv.attr('id', 'receipeInfo' + i);
-      recipeDiv.attr('class', 'card rounded');
+      recipeDiv.attr('class', 'card rounded col-sm-2 row');
       recipeDiv.attr('style', 'width: 33rem;');
+      recipeDiv.attr('style', 'overflow:hidden;');
       // recipeDiv.attr('class', 'col-sm-2');
       recipeDiv.css({'height': '340px', 'margin' : '10px'});
 
@@ -73,12 +74,17 @@ $.get(queryURL, function(response){
       recipeUrl.attr('class', 'card-text text-center text-wrap btn btn-info');
       recipeUrl.attr('href', edamamCall[i].recipe.url);
       recipeUrl.attr('target', '_blank');
+      // recipeUrl.attr('style', 'padding: 0px; font-size: 10px; display: inline-block; position: absolute; bottom: 0px; margin: 0 auto;');
+      recipeUrl.attr('style', 'padding: 0px; font-size: 10px; margin-bottom: 0px;');   
+      
+      // position: absolute; margin: 0 auto; position: absolute; bottom: 0px;
+
       recipeUrl.text('Get Details');
-      recipeAnchor.append(recipeUrl);
-      recipeDiv.append(recipeAnchor);
+      // recipeDiv.append(recipeAnchor);f
 
      //Append name,image and url of the recipe
       recipeDiv.append(recipeAnchor);
+      recipeDiv.append(recipeUrl);
 
       //Recipes ingredients
       var ingredientsDiv = $('<div>'); //whole grocery card
