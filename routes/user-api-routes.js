@@ -116,7 +116,8 @@ module.exports = function(app) {
       res.json({
         email: req.user.email,
         id: req.user.id,
-        preference: req.user.userPreference
+        preference: req.user.userPreference,
+        name: req.user.name
       });
     }
   });

@@ -94,3 +94,8 @@ $.get(queryURL, function(response){
   // })
   };
 });
+
+$.get("/api/user_data", function(response){
+  console.log(response.name)
+  $("#name").html(response.name.toUpperCase())
+})
