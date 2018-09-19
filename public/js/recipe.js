@@ -49,8 +49,8 @@ $.get(queryURL, function(response){
       recipeDiv.css({'height': '340px', 'margin' : '10px'});
 
       var recipeAnchor = $('<a>')
-      recipeAnchor.attr('href', edamamCall[i].recipe.url);
-      recipeAnchor.attr('target', '_blank');
+      // recipeAnchor.attr('href', edamamCall[i].recipe.url);
+      // recipeAnchor.attr('target', '_blank');
 
       var recipePic = $('<img>');
       recipePic.attr('class', 'card-img-top rounded')
@@ -59,9 +59,21 @@ $.get(queryURL, function(response){
       recipeAnchor.append(recipePic);
 
       var recipeTitle = $('<h3>');
-      recipeTitle.attr('class', 'card-text text-center text-wrap card-title');
+      recipeTitle.attr('class', 'card-text text-center text-wrap card-title recipeTitle');
       recipeTitle.text(edamamCall[i].recipe.label);
       recipeAnchor.append(recipeTitle);
+
+      var recipeSource = $('<h4>');
+      recipeSource.attr('class', 'card-text text-center text-wrap');
+      recipeSource.text('Source: ' + edamamCall[i].recipe.source);
+      recipeAnchor.append(recipeSource);
+
+      var recipeUrl = $('<button>');
+      recipeUrl.attr('class', 'card-text text-center text-wrap btn btn-info');
+      recipeUrl.attr('href', edamamCall[i].recipe.url);
+      recipeUrl.attr('target', '_blank');
+      recipeUrl.text('Get Details');
+      recipeAnchor.append(recipeUrl);
 
      //Append name,image and url of the recipe
       recipeDiv.append(recipeAnchor);
@@ -72,6 +84,7 @@ $.get(queryURL, function(response){
       ingredientItems.attr('class', 'ingredient')
       // ingredientItems.text(edamamCall[i].recipe.ingredientLines);
       // var groceryItem = $("<h6>");
+
       for (var j = 0; j < edamamCall[i].recipe.ingredientLines.length; j++) {
         var groceryItem = $("<p>");
         groceryItem.text(edamamCall[i].recipe.ingredientLines[j]);
