@@ -70,7 +70,7 @@ $.get(queryURL, function(response){
       recipeSource.text('Source: ' + edamamCall[i].recipe.source);
       recipeAnchor.append(recipeSource);
 
-      var recipeUrl = $('<button>');
+      var recipeUrl = $('<a>');
       recipeUrl.attr('class', 'card-text text-center text-wrap btn btn-info');
       recipeUrl.attr('href', edamamCall[i].recipe.url);
       recipeUrl.attr('target', '_blank');
@@ -80,7 +80,7 @@ $.get(queryURL, function(response){
       // position: absolute; margin: 0 auto; position: absolute; bottom: 0px;
 
       recipeUrl.text('Get Details');
-      // recipeDiv.append(recipeAnchor);f
+      // recipeDiv.append(recipeAnchor);
 
      //Append name,image and url of the recipe
       recipeDiv.append(recipeAnchor);
