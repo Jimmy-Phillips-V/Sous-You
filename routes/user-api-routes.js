@@ -119,6 +119,7 @@ module.exports = function(app) {
         id: req.user.id,
         preference: req.user.userPreference,
         zip: req.user.zipCode
+        
       });
     }
   });
