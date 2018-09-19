@@ -30,7 +30,7 @@ app.use(passport.session());
 // Routes
 require("./routes/user-api-routes")(app);
 require("./routes/htmlRoutes")(app);
-require("./routes/map-route.js")(app);
+// require("./routes/map-route.js")(app);
 
 db
 // var syncOptions = { force: false };

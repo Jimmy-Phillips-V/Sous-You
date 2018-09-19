@@ -58,9 +58,10 @@ module.exports = function(app) {
   });
 
   app.get("/api/userzip", function (req, res) {
-    db.User.findOne({
+    db.User.findAll({
       where: {
-        id: req.user.id
+        id: req.user.id,
+        zipCode: req.user.zipCode
       }
     }).then(function(dbUser) {
     res.json(dbUser)
@@ -114,10 +115,12 @@ module.exports = function(app) {
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
+        name: req.user.name,
         email: req.user.email,
         id: req.user.id,
         preference: req.user.userPreference,
-        name: req.user.name
+        zip: req.user.zipCode
+        
       });
     }
   });
