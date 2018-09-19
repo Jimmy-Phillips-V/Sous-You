@@ -122,6 +122,7 @@ body {
   display:inline-block;
   padding: 8px;
   margin: 2px;
+  position: relative;
 }
 
 .recipe-row .card {
@@ -211,10 +212,38 @@ body {
 
 .meal {
   width: 100%;
-  height: 100%; 
-  background: whitesmoke;
-  overflow-y: auto;
+  height: 100%;
+  background: blue;
 }
-.ingredient {
-  font-size: 15px;
+
+#recipes {
+  background: transparent;
+  border-color: transparent;
+  height: 370px !important;
+  background-size: cover;
+  /* overflow: hidden; */
 }
+
+.recDiv {
+  background: red;
+}
+
+h4 {
+  color: black !important;
+  font-size: 10px;
+}
+
+h3 {
+  color: black !important;
+}
+
+/* btn {
+  padding: 0px !important;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+} */
+/* 
+#header .callout {
+
+} */
