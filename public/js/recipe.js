@@ -46,6 +46,7 @@ $.get(queryURL, function(response){
       recipeDiv.attr('id', 'receipeInfo' + i);
       recipeDiv.attr('class', 'card rounded');
       recipeDiv.attr('style', 'width: 33rem;');
+      // recipeDiv.attr('class', 'col-sm-2');
       recipeDiv.css({'height': '340px', 'margin' : '10px'});
 
       var recipeAnchor = $('<a>')
