@@ -18,20 +18,20 @@ var value = pref;
 var diet;
 
 if (value == 1) {
-  diet = "vegan"
+  diet = "vegan meals"
   console.log(diet)
   }
 else if (value == 2) {
-  diet = "vegetarian"
+  diet = "vegetarian meals"
   }
 else if (value == 3) {
-  diet = "paleo"
+  diet = "paleo meals"
   }
 else if (value == 4) {
-  diet = "pescatarian"
+  diet = "pescatarian meals"
   }
 else if (value == 5) {
-  diet = "balanced"
+  diet = "balanced meals"
   }
 
     
@@ -100,12 +100,12 @@ $.get(queryURL, function(response){
         console.log(groceryItem);
       }
 
-      var recipeName = $('<h2>');
+      var recipeName = $('<h5>');
       recipeName.attr('class', 'recipeName');
       recipeName.text(edamamCall[i].recipe.label);
       $(recipeName).append(ingredientItems);
       $(ingredientsDiv).append(recipeName);
-      recipeName.attr('class', 'recipeGroceries')
+
 
       //send response to our html page 
       $('#recipes').append(recipeDiv);

@@ -2,25 +2,25 @@
 <html lang="en" class="profileHtml">
 
 <head>
-  <title>Sous-You</title>
+  <title>Sous You</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <!-- Favicon -->
   <link rel="icon" href="../images/orange_plate.png">
   
 
-  <title>Sous-You</title>
+  <title>Sous You</title>
 
   <!-- Reset CSS -->
   <link rel="stylesheet" href="../styles/reset.css">
 
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-<!-- Custom styles for this template -->
-<link href="/styles/styles.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="/styles/styles.css" rel="stylesheet">
 
 </head>
 
@@ -33,11 +33,11 @@
     <div class="cover-container d-flex p-3 mx-auto flex-column text-center">
       <header class="masthead mb-auto">
         <div class="inner">
-          <h3><a class="masthead-brand" href="#">SOUS <span id="name">something</span></a></h3>
+          <h3><a class="masthead-brand" href="#">SOUS <span id="name"></span></a></h3>
           <nav class="nav nav-masthead justify-content-center">
             <!-- <a class="nav-link text-light" href="profile.html">Profile</a> -->
             <!-- <a class="nav-link text-light" href="saved.html">Saved</a> -->
-            <a class="nav-link text-light" href="index.html">Log Out</a>
+            <a class="nav-link text-light logout" href="/">Log Out</a>
           </nav>
         </div>
       </header>
@@ -102,14 +102,14 @@
 
     <!-- Google Maps - Closest Grocery Stores -->
 
-    <div id="secondRow" class="row col-sm-12 w-100 p-3">
+    <div id="secondRow row" class="row col-md-12 w-100 p-3">
 
       <div class="map card col-sm-4" id="map">
         <p>Grocery Stores near me</p>
       </div>
 
-      <div class="grocery card col-sm-7">
-        <p>This Week's Grocery List</p>
+      <div class="grocery card col-sm-7 scroll">
+        <h4>This Week's Grocery List</h4>
         <div class="meal">
         </div>
       </div>
@@ -135,6 +135,14 @@
       </div>
     </div>
   </div> -->
+
+  <script>
+
+  $(".logout").on("click", function(){
+      $.get("/logout")
+  })
+
+  </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="../js/web_map.js"></script>
