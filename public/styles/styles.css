@@ -148,11 +148,11 @@ body {
 }
 
 #gap {
-  height: 5%;
+  height: 90px;
 }
 
 .map {
-  margin-left: 3% !important;
+  margin-left: 5% !important;
   margin-right: 2% !important;
 }
 
@@ -201,16 +201,19 @@ body {
   font-size: 10px;
 }
 
-
+/* 
 .grocery{
-  background-color:  blanchedalmond
-}
+  background-color:  blanchedalmond;
+  overflow: hidden;
+  background-size: contain;
+} */
 
 .meal {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   background: paleturquoise;
-  overflow-y: scroll; 
+  overflow: auto;
+  height: 280px;
 }
 
 #recipes {
@@ -218,7 +221,6 @@ body {
   border-color: transparent;
   height: 370px !important;
   background-size: cover;
-  /* overflow: hidden; */
 }
 
 .recDiv {

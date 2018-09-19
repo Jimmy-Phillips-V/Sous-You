@@ -109,7 +109,7 @@ $.get(queryURL, function(response){
 
       //send response to our html page 
       $('#recipes').append(recipeDiv);
-      $('.meal').append(ingredientsDiv)
+      $('.meal').append(ingredientsDiv);
      } 
    })
   // })
