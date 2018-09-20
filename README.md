@@ -5,7 +5,7 @@
 
 As users are prompted to sign up for the application they will be asked to categorize their dietary preferences as one of the following: 'Vegan', 'Vegetarian', 'Paleo', 'Pescatarian', or 'No Preference'. These 5 categories will dictate what recipes (and groceries) will be sent to the user's profile page through the Edamam API. 
 
-![Recipe Cards](../public/images/recipes.png)
+![Recipe Cards](./public/images/recipes.png)
 
 In addition to other typical fields such as name and email address, users will also be asked to provide their zip code so an integrated Google Map can show the user where all the local grocery stores in their area are. 
 
