@@ -123,8 +123,7 @@ body {
   padding: 8px;
   margin: 2px;
   position: relative;
-  /* background-color: rgba(255, 255, 255, .5) !important; */
-  background-color: rgb(245, 245, 245, 0.7) !important;
+  background-color: rgb(245, 245, 245, .9) !important;
   text-shadow: none;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
@@ -156,7 +155,7 @@ body {
 }
 
 #gap {
-  height: 70px;
+  height: 50px;
 }
 
 .map {
@@ -177,6 +176,8 @@ body {
 
 .recipeTitle{
   font-size: 14px;
+  color: black;
+  margin-top: 5px;
 }
 
 .card-body {
@@ -216,12 +217,15 @@ body {
 
 h6 {
   color: white;
-  background: rgba(105, 105, 105, .5);
+  /* background: rgba(105, 105, 105, .5); */
+  background: rgba(130, 63, 0, 0.6);
+  /* background: rgb(95,158,160,.8); */
   text-align: center;
   font-size: 1.2rem;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-radius: .25rem!important;
+  margin-bottom: 20px;
 }
 
 #recipes {
@@ -233,6 +237,7 @@ h6 {
 
 .recipeName {
   text-align: center;
+  font-size: 14px;
 }
 
 .recDiv {
@@ -249,7 +254,8 @@ h3 {
 }
 
 .groceries {
-  background: rgba(105, 105, 105, .5);
+  background: rgba(105, 105, 105, .4);
+  /* background: rgb(95,158,160,.5); */
   border-radius: .25rem!important;
   padding: 10px;
   margin-bottom: 20px;
@@ -264,7 +270,14 @@ h3 {
   background-color: rgb(128, 0, 0, 0.55);
   padding: 3px;
   font-size: 10px;
+  position: absolute;
+  bottom: 4px;
+  right: 35%;
 }
-.jumbotron{
-  background-color: rgba(128, 128, 128, .9) !important
+
+.dayTitle {
+  font-size: 10px;
+  color: black;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
