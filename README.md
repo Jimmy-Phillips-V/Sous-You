@@ -22,13 +22,30 @@ The goal of this application is to expose users to a meal planning platform each
 
 ## Technologies Used
 
-Languages: 
-    HTML
-    CSS
-    Javascript
-Libraries:
-    Jquery
-    Bootstrap
-Database:
-    MySQL
+* Languages: 
+    * HTML
+    * CSS
+    * Javascript
+* Libraries:
+    * Jquery
+    * Bootstrap
+* Database:
+    * MySQL
+* API’s:
+    * Google Maps
+    * Edamam
+* Authentication:
+    * Passport
+* Server Hosting:
+    * Heroku
+* Node Modules:
+    * Too many to count
 
+## Future Development
+
+* Users can select 5 -7 recipes out of 10 or more prompted recipes so they can have more recipes each week that suit their needs or wants.
+* Budget preferences on sign up
+* Grubhub/Postmates delivery option for the nights you don’t want to cook at home.
+* Grocery store map shows which stores have current deals or coupons for items on your grocery list. 
+* Saved recipes tab.
+* More map features.
