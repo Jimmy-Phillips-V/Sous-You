@@ -47,7 +47,13 @@ $.get(queryURL, function(response){
       recipeDiv.attr('class', 'card rounded col-sm-2 row');
       recipeDiv.attr('style', 'width: 33rem;');
       recipeDiv.attr('style', 'overflow:hidden;');
-      recipeDiv.css({'height': '380px', 'margin' : '10px'});
+      recipeDiv.css({'height': '400px', 'margin' : '10px'});
+
+      var dayHeader = $('<p>')
+      dayHeader.attr('class', 'dayTitle')
+      var dayNumber = i + 1;
+      dayHeader.text("Day: " + dayNumber);
+      recipeDiv.append(dayHeader);
 
       var recipeAnchor = $('<a>')
       // recipeAnchor.attr('href', edamamCall[i].recipe.url);
@@ -71,6 +77,7 @@ $.get(queryURL, function(response){
 
       var recipeUrl = $('<a>');
       recipeUrl.attr('class', 'card-text text-center text-wrap btn urlbtn');
+      recipeUrl.attr('id', 'recipebtn')
       recipeUrl.attr('href', edamamCall[i].recipe.url);
       recipeUrl.attr('target', '_blank');
       // recipeUrl.attr('style', 'padding: 0px; font-size: 10px; display: inline-block; position: absolute; bottom: 0px; margin: 0 auto;');
