@@ -229,7 +229,7 @@ h6 {
 }
 
 #recipes {
-  background: transparent;
+  background: transparent !important;
   border-color: transparent;
   height: 370px !important;
   background-size: cover;
@@ -267,7 +267,6 @@ h3 {
 }
 
 .urlbtn {
-  /* background-color: #DEB887; */
   background-color: rgb(128, 0, 0, 0.55);
   padding: 3px;
   font-size: 10px;
