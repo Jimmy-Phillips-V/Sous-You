@@ -1,4 +1,7 @@
+# **Sous You**
+
 ![Home Page](./public/images/home_page.png) 
+## Overview
 “Sous You” is a recipe and grocery management application which can introduce new recipes to users based upon their dietary preferences. 
 
 ![Sign Up](./public/images/sign_up.png)
@@ -16,3 +19,16 @@ All answers to the sign up prompt are stored via MySQL database and authenticate
 ![Log In](./public/images/login.png)
 
 The goal of this application is to expose users to a meal planning platform each week to cook new and exciting meals that they would not normally prepare. Additionally, it aims to streamline grocery shopping for the week of recipes by providing users all of the necessary ingredients through the chosen recipes each week.
+
+## Technologies Used
+
+Languages: 
+    HTML
+    CSS
+    Javascript
+Libraries:
+    Jquery
+    Bootstrap
+Database:
+    MySQL
+
