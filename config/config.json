@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "password",
+    "password": "mysqlpassword",
     "database": "sousYou_db",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "password",
+    "password": "mysqlpassword",
     "database": "sousYou_db",
     "host": "localhost",
     "dialect": "mysql",
